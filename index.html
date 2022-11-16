@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+   
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  
+
+  </head>
+  <body>
+    <h1>Wordle Assistant <span id="nerd" style="cursor: pointer;" onmouseover="this.innerText = '✨';" onmouseleave="this.innerText = '🤓';"title="✨ Clear All" class="" >🤓</span></h1>
+    <h2 class="h2">Enter Your Game</h2>
+    <p class="p">Click on each box to change the color.</p>
+    <div id="gameboard">
+      <div id="rows-container">
+    <div class="row" id="turn-1" data-rowindex="1">
+      <input class="gray" maxlength="1" size="2" value="" placeholder=" " data-index="0" / >
+      <input class="gray" maxlength="1" size="2" value="" placeholder=" " data-index="1" / >
+      <input class="gray" maxlength="1" size="2" value="" placeholder=" " data-index="2" / >
+      <input class="gray" maxlength="1" size="2" value="" placeholder=" " data-index="3" / >
+      <input class="gray" maxlength="1" size="2" value="" placeholder=" " data-index="4" / >
+    </div>
+  </div>
+  <div style="text-align:right" id="add-row" class="fake-link"><strong>Add Row [+]</strong></div>
+    <button id="get-solutions">
+      Get Solution Count
+    </button>
+    <p class="results-count" id="results"></p>
+    <span tabindex="0" 
+      id="show-results"
+      class="fake-link display-none"
+      >🙈 See the solutions...</span>
+    <div class="display-none output" id="word-list"></div>
+    <div id="back-to-top">
+      <span tabindex="0" 
+        id="pointer"
+        class="fake-link"
+        onclick="window.scrollTo({top: 0,left: 0,behavior: 'smooth'});"
+        >☝️</span>
+    </div>
+  </div>
+    
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</html>
